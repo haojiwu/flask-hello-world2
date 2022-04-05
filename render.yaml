@@ -5,7 +5,13 @@ services:
   env: python
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-  scaling:
-    minInstances: 1
-    maxInstances: 3
-    targetCPUPercent: 60 
+  envVars:
+  - fromGroup: envvars
+  - key: PROMPT_FOR_THIS_IN_ENVVAR
+    sync: false
+
+envVarGroups:
+- name: envvars
+  envVars:
+  - key: PROMPT_FOR_THIS_IN_ENVVAR_GROUP
+    sync: false
