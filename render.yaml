@@ -15,3 +15,6 @@ envVarGroups:
   envVars:
   - key: PROMPT_FOR_THIS_IN_ENVVAR_GROUP
     sync: false
+  - key: NORMAL_ENV_VARIABLE
+    value: haoji_123
+    
