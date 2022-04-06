@@ -6,6 +6,7 @@ services:
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
   envVars:
+  - fromGroup: my-env-group
   - fromGroup: envvars
   - key: PROMPT_FOR_THIS_IN_ENVVAR
     sync: false
