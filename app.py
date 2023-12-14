@@ -9,7 +9,7 @@ def hello_world():
     return 'Hello, World!'
 @app.route("/async-test", methods=['PUT'])
 def result():
-    print '------->'+str(request.headers)+'<------------'
-    print '------->'+str(request.data)+'<------------'
-    print '------->'+str(request.form)+'<------------'
+    print('------->' + str(request.headers) + '<------------')
+    print('------->' + str(request.data) + '<------------')
+    print('------->' + str(request.form) + '<------------')
     return 'OK'
