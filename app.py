@@ -7,7 +7,7 @@ def hello_world():
     for x in range(110):
         print(x)
     return 'Hello, World!'
-@app.route("/async-test", methods=['PUT'])
+@app.route("/async-test", methods=['POST'])
 def result():
     print('------->' + str(request.headers) + '<------------')
     print('------->' + str(request.data) + '<------------')
